@@ -15,7 +15,7 @@ class Carton : public Boite{
   public :
     //Méthodes génériques :
     //Constructeur
-    Carton(int x, int y, int z, int dimX, int dimY, int dimZ, float poidRang, bool fragile, float masse);
+    Carton(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const bool fragile, const float masse);
     //Destructeur
     ~Carton(void) {}
     
