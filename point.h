@@ -22,7 +22,9 @@ class Point{
       void setX(int x) {_x=x;}
       void setY(int y) {_y=y;}
       void setZ(int z) {_z=z;}
-  
+    
+    //Méthodes spéciales :
+      //Implémenter un move ? Est ce que ça sera utile ?
 };
 
 
