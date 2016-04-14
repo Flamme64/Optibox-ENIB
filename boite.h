@@ -14,7 +14,7 @@ class Boite{
     
     //Méthodes génériques :
       //Constructeur :
-      Boite(x,y,z,dimX,dimY,dimZ) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ) {_point = Point(x,y,z);}
+      Boite(int x, int y, int z, const int dimX, const int dimY, const int dimZ) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ) {_point = Point(x,y,z);}
       //Destructeur
       ~Boite(void) {delete _point;}
       
