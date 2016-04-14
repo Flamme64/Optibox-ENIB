@@ -15,13 +15,13 @@ Je propose de noter ça comme ça :
 (Je vais faire un exemple parce que je sens que ça va être plutot parlant, avec un exemple de réponse)
 
 1 - Jacques
-On pourrait noter les idées comme ça
-  Norbert
-  Jsuis pas d'accord parce patatipatata
-  Amélie
-  Mais si c'est une bonne idée parce que pwal
-  Florian
-  Qu'est ce que fais ici moi ?
+	On pourrait noter les idées comme ça
+	Norbert
+	Jsuis pas d'accord parce patatipatata
+	Amélie
+	Mais si c'est une bonne idée parce que pwal
+	Florian
+	Qu'est ce que fais ici moi ?
   
 Si vous pensez que c'est pas une bonne idée dites le je n'impose rien :)
 
