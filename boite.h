@@ -15,12 +15,13 @@ class Boite{
     //Méthodes génériques :
       //Constructeur :
       Boite(x,y,z,dimX,dimY,dimZ) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ) {_point = Point(x,y,z);}
+      //Destructeur
+      ~Boite(void) {delete _point;}
       
       //Accesseurs :
       const int getDimX(void) {return _dimX;}
       const int getDimY(void) {return _dimY;}
       const int getDimZ(void) {return _dimZ;}
-  
   
 };
 
