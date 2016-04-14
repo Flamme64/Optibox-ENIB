@@ -19,7 +19,7 @@ class Carton : public Boite{
     //Destructeur
     ~Carton(void) {}
     
-}
+};
 
 #endif CARTON_H
 
