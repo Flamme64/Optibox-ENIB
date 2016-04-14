@@ -1,4 +1,6 @@
 # Optibox-ENIB
+/!\ OUVREZ ET MODIFIEZ LE FICHIER POUR VOIR LA MISE EN PAGE /!\
+
 Projet Informatique de S6
 
 Playlist à écouter pour vous aider à programmer otaké :
