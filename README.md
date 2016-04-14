@@ -1,6 +1,9 @@
 # Optibox-ENIB
 Projet Informatique de S6
 
+Playlist à écouter pour vous aider à programmer otaké :
+https://play.spotify.com/user/pvnova/playlist/6xU48dkPF1SkFhWNZWFpoA?play=true&utm_source=open.spotify.com&utm_medium=open
+
 IMPORTANT A LIRE :
 Pour pouvoir communiquer ou mettre des remarques sur les fichiers, mettez un commentaire entre /* */ à la fin du fichier
 Je propose de noter ça comme ça : 
