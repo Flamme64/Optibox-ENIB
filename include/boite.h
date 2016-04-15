@@ -17,14 +17,19 @@ class Boite{
     //Méthodes génériques :
       //Constructeur :
       Boite(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ), _name(name), _point(x,y,z) {}
-      //Destructeur
+      // Destructeur
       ~Boite(void) {}
       
-      //Accesseurs :
+      // Accesseurs
       int getDimX(void) {return _dimX;}
       int getDimY(void) {return _dimY;}
       int getDimZ(void) {return _dimZ;}
       std::string getName(void) {return _name;}
+      
+      // Mutateurs
+      void setDimX(int dimX) {_dimX=dimx;}
+      void setDimY(int dimY) {_dimY=dimY;}
+      void setDimZ(int dimZ) {_dimZ=dimZ;}
   
 };
 
