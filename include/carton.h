@@ -13,7 +13,7 @@ class Carton : public Boite{
       const bool _fragile;    // Pour savoir si le carton doit être placé au dessus
       int _maxDim;      // La dimension maximale parmis dimX, dimY et dimZ
       const float _masse;     // Le poids réel du carton, sa masse quoi 
-      const std::string
+      const std::string;
       Contenant * _cont;
       
   public :
@@ -25,9 +25,9 @@ class Carton : public Boite{
     
     // Accesseurs
     float getPoidRang(void) {return _poidRang;}
-    const bool getFragile(void) {return _fragile;}
+    bool getFragile(void) {return _fragile;}
     int getMaxDim(void) {return _maxDim;}
-    const float getMasse(void) {return _masse;}
+    float getMasse(void) {return _masse;}
     Contenant getCont(void) {return _cont;}
     
     // Mutateurs :
