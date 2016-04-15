@@ -2,7 +2,7 @@
 
 // Constructeur
 Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse)
-:   Boite(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
+:   Pave(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
 {
   //  Attributs qui seront instanciés ultérieurement
   _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
