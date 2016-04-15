@@ -17,7 +17,7 @@ class Carton : public Boite{
   public :
     // Méthodes génériques :
     // Constructeur
-    Carton(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const std::string name, const bool fragile, const float masse);
+    Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse);
     //Destructeur
     ~Carton(void) {}
     
@@ -26,10 +26,10 @@ class Carton : public Boite{
     bool getFragile(void) {return _fragile;}
     int getMaxDim(void) {return _maxDim;}
     float getMasse(void) {return _masse;}
-    Contenant getCont(void) {return _cont;}
+    Contenant* getCont(void) {return _cont;}
     
     // Mutateurs :
-    void setCont(Contenant cont) {_cont=cont;}
+    void setCont(Contenant* cont) {_cont=cont;}
     
 };
 
