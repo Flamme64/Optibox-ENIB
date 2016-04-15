@@ -16,6 +16,7 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
 // Fonction qui range les dimensions par ordre croissant
 void Carton::arrangeDim(void){
   // 1- On copie les dimensions dans des variables temporaires
+  int dimX, dimY, dimZ;
   dimX=getDimX();
   dimY=getDimY();
   dimZ=getDimZ();
