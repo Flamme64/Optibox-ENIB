@@ -14,11 +14,12 @@ class Contenant : public Boite{
     
     // Méthodes génériques
     // Contructeur
-    Contenant(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, float chargeMax);
+    Contenant(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const std::string name, float chargeMax);
     // Destructeur
     ~Contenant(void) {}
     
-    // Gestion des cartons
+    // Gestion des cartons :
+    
   
 
 };
@@ -29,5 +30,6 @@ class Contenant : public Boite{
 /* REMARQUES :
 1 - Jacques
   Je ne me souviens pas de ce que l'attribut chargeMax représente
+
 
 */
