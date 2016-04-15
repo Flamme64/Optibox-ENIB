@@ -19,7 +19,7 @@ Carton::Carton(int x, int y, int z, const int dimX, const int dimY, const int di
   
   // Création de l'objet
   Boite(x,y,z,dimX,dimY,dimZ);
-  _poidRang=NULL;
+  _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
   _fragile=fragile;
   _masse=masse;
   _maxDim=dimX;
