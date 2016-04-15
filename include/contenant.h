@@ -3,18 +3,18 @@
 
 #include <vector>
 
-#include "boite.h"
+#include "pave.h"
 class Carton; //Il faudra mettre un include dans le fichier final
 
-class Contenant : public Boite{
+class Contenant : public Pave{
   public :
     // Attributs :
-    float _chargeMax; 
+    float _masseMax; 
     std::vector<Carton*> _cartons;
     
     // Méthodes génériques
     // Contructeur
-    Contenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float chargeMax) : Boite(x,y,z,dimX,dimY,dimZ, name), _chargeMax(chargeMax) {}
+    Contenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax) : Pave(x,y,z,dimX,dimY,dimZ, name), _masseMax(masseMax) {}
     // Destructeur
     ~Contenant(void) {}
     
