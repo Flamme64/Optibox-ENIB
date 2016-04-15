@@ -1,13 +1,13 @@
 #include "carton.h"
 
-Carton::Carton(int x, int y, int z, const int dimX, const int dimY, const int dimZ, const std::string name, const bool fragile, const float masse)
+Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse)
 :   Boite(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
 {
   
   // Rangement des dimensions par ordre décroissant
   int cache;
   for(int i=0; i<3; i++){
-    if(dimX < dimY){ //Si dimY est plus grande que dimX on met dimY dans dimX
+    if(_dimX < _dimY){ //Si dimY est plus grande que dimX on met dimY dans dimX
       cache = dimX;
       dimX = dimY;
       dimY = cache;
@@ -18,7 +18,11 @@ Carton::Carton(int x, int y, int z, const int dimX, const int dimY, const int di
       dimZ = cache;
     }
   }
-    _maxDim=dimX;
+  // On stocke les valeurs dans cet ordre
+  _maxDim=dimX;
+  _dimX=dimX;
+  _dimY=dimY;
+  _dimZ=dimZ;
     
   //  Attributs qui seront instanciés ultérieurement
   _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
