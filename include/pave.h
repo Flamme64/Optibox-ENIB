@@ -1,10 +1,10 @@
-#ifndef BOITE_H
-#define BOITE_H
+#ifndef PAVEDROIT_H
+#define PAVEDROIT_H
 
 #include <string>
 #include "point.h"
 
-class Boite{
+class Pave{
   private :
     //Attributs :
       int _dimX, _dimY, _dimZ;
@@ -16,9 +16,9 @@ class Boite{
     
     //Méthodes génériques :
       //Constructeur :
-      Boite(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ), _name(name), _point(x,y,z) {}
+      Pave(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ), _name(name), _point(x,y,z) {}
       // Destructeur
-      ~Boite(void) {}
+      ~Pave(void) {}
       
       // Accesseurs
       int getDimX(void) {return _dimX;}
