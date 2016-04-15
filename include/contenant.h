@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "boite.h"
-Class Carton; //Il faudra mettre un include dans le fichier final
+class Carton; //Il faudra mettre un include dans le fichier final
 
 class Contenant : public Boite{
   public :
