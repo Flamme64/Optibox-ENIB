@@ -14,7 +14,7 @@ class Rangement{
   
   // Méthodes génériques :
   // Constructeur
-  Rangement(void) {_cartRang=NULL; _contRang=NULL;}
+  Rangement(void) {}
   // Destructeur
   ~Rangement(void) {}
   
