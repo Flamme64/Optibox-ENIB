@@ -26,10 +26,7 @@ class Pave{
       int getDimZ(void) {return _dimZ;}
       std::string getName(void) {return _name;}
       
-      // Mutateurs
-      void setDimX(int dimX) {_dimX=dimX;}
-      void setDimY(int dimY) {_dimY=dimY;}
-      void setDimZ(int dimZ) {_dimZ=dimZ;}
+      // Il n'y a pas de mutateurs implémentés ici puisqu'ils ne seront utilisés que dans carton
   
 };
 
