@@ -1,10 +1,10 @@
 #ifndef CARTON_H
 #define CARTON_H
 
-#include "boite.h"
+#include "pave.h"
 class Contenant;
 
-class Carton : public Boite{
+class Carton : public Pave{
   
   private :
     // Attributs :
