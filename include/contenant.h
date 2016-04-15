@@ -14,7 +14,7 @@ class Contenant : public Boite{
     
     // Méthodes génériques
     // Contructeur
-    Contenant(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const std::string name, float chargeMax);
+    Contenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float chargeMax);
     // Destructeur
     ~Contenant(void) {}
     
