@@ -1,6 +1,7 @@
 #ifndef BOITE_H
 #define BOITE_H
 
+#include <string>
 #include "point.h"
 
 class Boite{
