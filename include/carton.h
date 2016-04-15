@@ -8,16 +8,18 @@ class Carton : public Boite{
   
   private :
     // Attributs :
+      std::string _name;
       float _poidRang;  // Poid du carton pour le classer dans le tableau de rangement
       const bool _fragile;    // Pour savoir si le carton doit être placé au dessus
       int _maxDim;      // La dimension maximale parmis dimX, dimY et dimZ
       const float _masse;     // Le poids réel du carton, sa masse quoi 
+      const std::string
       Contenant * _cont;
       
   public :
     // Méthodes génériques :
     // Constructeur
-    Carton(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const bool fragile, const float masse);
+    Carton(int x, int y, int z, const int dimX, const  int dimY, const int dimZ, const std::string name, const bool fragile, const float masse);
     //Destructeur
     ~Carton(void) {}
     
