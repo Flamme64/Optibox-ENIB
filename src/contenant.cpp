@@ -1,11 +1,6 @@
 #include "contenant.h"
 
-Contenant::Contenant(int x, int y, int z, int dimX,  int dimY, int dimZ, const std::string name, float chargeMax)
-: Boite(x,y,z,dimX,dimY,dimZ, name), _chargeMax(chargeMax)
-{
-  //Attribut qui sera intancié plus tard
-  _cartons=NULL;
-}
+
 
 /*
 1 - Jacques
