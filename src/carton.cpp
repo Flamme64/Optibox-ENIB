@@ -22,7 +22,8 @@ Carton::Carton(int x, int y, int z, const int dimX, const int dimY, const int di
   _poidRang=NULL;
   _fragile=fragile;
   _masse=masse;
-  _maxDim=dimX; 
+  _maxDim=dimX;
+  _cont=NULL; //Le contenant sera attribué pendant la phase de rangement
   
 }
 
