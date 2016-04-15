@@ -5,6 +5,7 @@
 
 #include "contenant.h"
 #include "carton.h"
+#include "espaceLibre.h"
 
 class Rangement{
   public :
