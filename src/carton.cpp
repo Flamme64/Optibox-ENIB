@@ -1,10 +1,26 @@
 #include "carton.h"
 
+// Constructeur
 Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse)
 :   Boite(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
 {
+  //  Attributs qui seront instanciés ultérieurement
+  _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
+  _cont=NULL; //Le contenant sera attribué pendant la phase de rangement
   
   // Rangement des dimensions par ordre décroissant
+  arrangeDim();
+  
+}
+
+// Fonction qui range les dimensions par ordre croissant
+void Carton::arrangeDim(void){
+  // 1- On copie les dimensions dans des variables temporaires
+  dimX=getDimX();
+  dimY=getDimY();
+  dimZ=getDimZ();
+  
+  // 2- On les range par ordre croissant
   int cache;
   for(int i=0; i<3; i++){
     if(dimX < dimY){ //Si dimY est plus grande que dimX on met dimY dans dimX
@@ -18,17 +34,15 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
       dimZ = cache;
     }
   }
-  // On stocke les valeurs dans cet ordre
-  _maxDim=dimX;
-  this.setDimX(dimX);
-  this.setDimY(dimY);
-  this.setDimZ(dimZ);
-    
-  //  Attributs qui seront instanciés ultérieurement
-  _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
-  _cont=NULL; //Le contenant sera attribué pendant la phase de rangement
+  
+  // 3- On les recopie dans les attributs
+  setDimX(dimX);
+  setDimY(dimY);
+  setDimZ(dimZ);
   
 }
+
+
 
 /* IDEES/REMARQUES :
 
