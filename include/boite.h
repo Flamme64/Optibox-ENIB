@@ -21,10 +21,10 @@ class Boite{
       ~Boite(void) {delete _point;}
       
       //Accesseurs :
-      const int getDimX(void) {return _dimX;}
-      const int getDimY(void) {return _dimY;}
-      const int getDimZ(void) {return _dimZ;}
-      const std::string getName(void) {return _name;}
+      int getDimX(void) {return _dimX;}
+      int getDimY(void) {return _dimY;}
+      int getDimZ(void) {return _dimZ;}
+      std::string getName(void) {return _name;}
   
 };
 
