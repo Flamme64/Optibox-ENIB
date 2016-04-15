@@ -35,14 +35,12 @@ class Carton : public Boite{
     
 };
 
-#endif CARTON_H
-
 /*REMARQUES :
 1 - Jacques
   Il faudrait prende en compte le cas où l'utilisateur ne connait pas le poid du carton,
   il y a quand même peut de chance pour qu'il connaisse exactement le poid ou qu'il prenne le temps de tous les peser.
 
-
-
-
 */
+#endif
+
+
