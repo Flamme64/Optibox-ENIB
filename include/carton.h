@@ -2,7 +2,7 @@
 #define CARTON_H
 
 #include "boite.h"
-Class Contenant; //Il faudra mettre un include dans le fichier final
+class Contenant;
 
 class Carton : public Boite{
   
