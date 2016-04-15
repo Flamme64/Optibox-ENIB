@@ -9,6 +9,13 @@ class Pave{
     //Attributs :
       int _dimX, _dimY, _dimZ;
       const std::string _name;
+      
+    //Mutateurs :
+    void setDimX(int dimX) {_dimX=dimX;}
+    void setDimY(int dimY) {_dimY=dimY;}
+    void setDimZ(int dimZ) {_dimZ=dimZ;}
+    // Les mutateurs des dimensions sont en private parce qu'on veut qu'ils ne soient accessibles qu'à partir de la classe amie Carton mais pas dans Contenant et EspaceLibre
+    
     
   public :
     //Attributs importés :
@@ -26,7 +33,7 @@ class Pave{
       int getDimZ(void) {return _dimZ;}
       std::string getName(void) {return _name;}
       
-      // Il n'y a pas de mutateurs implémentés ici puisqu'ils ne seront utilisés que dans carton
+    
   
 };
 
