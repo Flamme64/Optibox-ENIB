@@ -20,9 +20,9 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
   }
   // On stocke les valeurs dans cet ordre
   _maxDim=dimX;
-  _dimX.setDimX(dimX);
-  _dimY=setDimY(dimY);
-  _dimZ=setDimZ(dimZ);
+  this.setDimX(dimX);
+  this.setDimY(dimY);
+  this.setDimZ(dimZ);
     
   //  Attributs qui seront instanciés ultérieurement
   _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
