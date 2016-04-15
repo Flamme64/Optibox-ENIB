@@ -30,9 +30,10 @@ class Carton : public Pave{
       
       // Mutateurs :
       void setCont(Contenant* cont) {_cont=cont;}
-      void setDimX(int dimX) {_dimX=dimX;}
-      void setDimY(int dimY) {_dimY=dimY;}
-      void setDimZ(int dimZ) {_dimZ=dimZ;}
+      //Les mutateurs implémentés dans la classe Pave
+      friend void Pave::setDimX(int dimX) {_dimX=dimX;}
+      friend void Pave::setDimY(int dimY) {_dimY=dimY;}
+      friend void Pave::setDimZ(int dimZ) {_dimZ=dimZ;}
     
     //Méthodes spéciales :
     void arrangeDim(void); //Gère le rangement par ordre décroissant des dimensions
