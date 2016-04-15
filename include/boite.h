@@ -18,7 +18,7 @@ class Boite{
       //Constructeur :
       Boite(int x, int y, int z, const int dimX, const int dimY, const int dimZ, const std::string name) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ), _name(name), _point(x,y,z) {}
       //Destructeur
-      ~Boite(void) {delete _point;}
+      ~Boite(void) {}
       
       //Accesseurs :
       int getDimX(void) {return _dimX;}
