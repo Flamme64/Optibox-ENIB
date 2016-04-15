@@ -1,5 +1,5 @@
 #-- program name, sources and obj --
-TARGET=Appli
+TARGET=main
 SRC=$(wildcard src/*.cpp)
 OBJ=$(SRC:.cpp=.o)
 
@@ -24,7 +24,7 @@ $(TARGET) : $(OBJ)
 	@echo
 
 #-- source file header files dependencies --
-src/Appli.o : include/pong.h
+src/Appli.o : include/rangement.h
 
 
 #-- compiler command for every source file --
