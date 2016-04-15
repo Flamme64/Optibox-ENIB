@@ -7,7 +7,7 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
   // Rangement des dimensions par ordre décroissant
   int cache;
   for(int i=0; i<3; i++){
-    if(_dimX < _dimY){ //Si dimY est plus grande que dimX on met dimY dans dimX
+    if(dimX < dimY){ //Si dimY est plus grande que dimX on met dimY dans dimX
       cache = dimX;
       dimX = dimY;
       dimY = cache;
@@ -20,9 +20,9 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
   }
   // On stocke les valeurs dans cet ordre
   _maxDim=dimX;
-  _dimX=dimX;
-  _dimY=dimY;
-  _dimZ=dimZ;
+  _dimX.setDimX(dimX);
+  _dimY=setDimY(dimY);
+  _dimZ=setDimZ(dimZ);
     
   //  Attributs qui seront instanciés ultérieurement
   _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
