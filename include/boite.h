@@ -27,7 +27,7 @@ class Boite{
       std::string getName(void) {return _name;}
       
       // Mutateurs
-      void setDimX(int dimX) {_dimX=dimx;}
+      void setDimX(int dimX) {_dimX=dimX;}
       void setDimY(int dimY) {_dimY=dimY;}
       void setDimZ(int dimZ) {_dimZ=dimZ;}
   
