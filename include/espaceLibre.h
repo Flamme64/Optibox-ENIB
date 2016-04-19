@@ -2,7 +2,7 @@
 #define ESPACELIBRE_H
 
 #include "pave.h"
-
+#include <iostream>
 class EspaceLibre : public Pave{
   private :
     // Attributs :
@@ -11,7 +11,7 @@ class EspaceLibre : public Pave{
   public :
     // Méthodes génériques :
       // Constructeur
-      EspaceLibre(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : Pave(x,y,z,dimX,dimY,dimZ,name) {_surface=dimX*dimY}
+	  EspaceLibre(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : Pave(x, y, z, dimX, dimY, dimZ, name) { _surface = dimX*dimY; }
       // Destructeur
       ~EspaceLibre(void) {}
       
@@ -19,11 +19,11 @@ class EspaceLibre : public Pave{
       float getSurface(void) {return _surface;}
         
       // Mutateurs de sécurité :
-      void setDimX(int dimX) {print("ERROR : Modification de la dimX d'un espace libre");}
-      void setDimY(int dimY) {print("ERROR : Modification de la dimY d'un espace libre"):}
-      void setDimZ(int dimZ) {print("ERROR : Modification de la dimZ d'un espace libre");}
+	  void setDimX(int dimX) { std::cout << "ERROR : Modification de la dimX d'un espace libre" << std::endl; }
+	  void setDimY(int dimY) { std::cout << "ERROR : Modification de la dimY d'un espace libre" << std::endl; }
+	  void setDimZ(int dimZ) { std::cout << "ERROR : Modification de la dimZ d'un espace libre" << std::endl; }
         
-}
+};
 
 
 #endif

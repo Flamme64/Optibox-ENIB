@@ -4,6 +4,8 @@
 #include <vector>
 
 #include "pave.h"
+#include <iostream>
+
 class Carton;
 
 class Contenant : public Pave{
@@ -19,9 +21,9 @@ class Contenant : public Pave{
     ~Contenant(void) {}
     
     // Mutateurs de sécurité :
-      void setDimX(int dimX) {print("ERROR : Modification de la dimX d'un contenant");}
-      void setDimY(int dimY) {print("ERROR : Modification de la dimY d'un contenant"):}
-      void setDimZ(int dimZ) {print("ERROR : Modification de la dimZ d'un contenant");}
+      void setDimX(int dimX) { std::cout << "ERROR : Modification de la dimX d'un contenant" << std::endl;}
+	  void setDimY(int dimY) { std::cout << "ERROR : Modification de la dimY d'un contenant" << std::endl;}
+      void setDimZ(int dimZ) { std::cout << "ERROR : Modification de la dimZ d'un contenant" << std::endl;}
     
     // Gestion des cartons :
     

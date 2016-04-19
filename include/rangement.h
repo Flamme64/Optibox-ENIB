@@ -1,12 +1,12 @@
 #ifndef RANGEMENT_H
-#define RANGEMENT
+#define RANGEMENT_H
 
 #include <vector>
 
 #include "contenant.h"
 #include "carton.h"
 #include "espaceLibre.h"
-
+;
 class Rangement{
   public :
   // Attributs :
