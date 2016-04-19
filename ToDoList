@@ -1,0 +1,9 @@
+Choses à faire :
+
+Fonction pour poser un carton.
+	Fonction test pour savoir si on peut poser un carton.
+		Est ce qu'il dépasse la limite de poid
+		Est ce qu'il est posé correctement dans un espace libre
+		Est ce qu'il rentre en contact avec le container
+		Est ce qu'il rentre en contact avec un autre carton
+		
