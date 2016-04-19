@@ -16,7 +16,12 @@ class EspaceLibre : public Pave{
       ~EspaceLibre(void) {}
       
       // Accesseur
-        float getSurface(void) {return _surface;}
+      float getSurface(void) {return _surface;}
+        
+      // Mutateurs
+      void setDimX(int dimX) {print("ERROR : Modification de la dimX d'un espace libre");}
+      void setDimY(int dimY) {print("ERROR : Modification de la dimY d'un espace libre"):}
+      void setDimZ(int dimZ) {print("ERROR : Modification de la dimZ d'un espace libre");}
         
 }
 
