@@ -18,7 +18,7 @@ class EspaceLibre : public Pave{
       // Accesseur
       float getSurface(void) {return _surface;}
         
-      // Mutateurs
+      // Mutateurs de sécurité :
       void setDimX(int dimX) {print("ERROR : Modification de la dimX d'un espace libre");}
       void setDimY(int dimY) {print("ERROR : Modification de la dimY d'un espace libre"):}
       void setDimZ(int dimZ) {print("ERROR : Modification de la dimZ d'un espace libre");}
