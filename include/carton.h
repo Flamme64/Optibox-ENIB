@@ -3,6 +3,7 @@
 
 #include "pave.h"
 class Contenant;
+class Pave;
 
 class Carton : public Pave{
   

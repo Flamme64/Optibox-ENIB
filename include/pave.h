@@ -27,9 +27,11 @@ class Pave{
       std::string getName(void) {return _name;}
       
       // Mutateurs
-      void setDimX(int dimX) {_dimX=dimX;}
-      void setDimY(int dimY) {_dimY=dimY;}
-      void setDimZ(int dimZ) {_dimZ=dimZ;}
+      virtual void setDimX(int dimX) {_dimX=dimX;}
+      virtual void setDimY(int dimY) {_dimY=dimY;}
+      virtual void setDimZ(int dimZ) {_dimZ=dimZ;}
+      
+    
   
 };
 
