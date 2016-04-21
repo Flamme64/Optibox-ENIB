@@ -10,20 +10,20 @@
 class Rangement{
   public :
   // Attributs :
-    int qContenant;
+    int _qContenant;
     std::vector<Carton*> _cartRang;
     std::vector<Contenant*> _contRang;
     std::vector<EspaceLibre*> _espLib;
   
   // Méthodes génériques :
   // Constructeur
-  Rangement(void) qContenant(0) :{}
+	Rangement(void) : _qContenant(0) {}
   // Destructeur
   ~Rangement(void) {}
   
   // Vérification de la possibilité de placement des cartons
-  verifMasseLegale(Carton * carton);
-  verifPlaceDispo(Carton * carton, int x, int y, int z);
+	bool verifMasseLegale(Carton * carton);
+	bool verifPlaceDispo(Carton * carton, int x, int y, int z);
 };
 
 #endif
