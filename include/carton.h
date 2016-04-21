@@ -33,8 +33,9 @@ class Carton : public Pave{
       void setCont(Contenant* cont) {_cont=cont;}
     
     //Méthodes spéciales :
-    void arrangeDim(void); //Gère le rangement par ordre décroissant des dimensions
-    
+	
+	//Gère le rangement par ordre décroissant des dimensions
+	void arrangeDim(void); 
     
 };
 
