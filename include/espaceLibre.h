@@ -25,6 +25,4 @@ class EspaceLibre : public Pave{
         
 };
 
-}; 
-
 #endif
