@@ -4,21 +4,23 @@
 
 #include "pave.h"
 #include <iostream>
+class Contenant;
 
 class EspaceLibre : public Pave{
   private :
     // Attributs :
       float _surface; // Je ne sais pas si ça sera utile mais dans le doute ...
+      Contenant * _contenant; // Contenant dans lequel se situe l'espace libre
   
   public :
     // Méthodes génériques :
       // Constructeur
 	  EspaceLibre(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : Pave(x, y, z, dimX, dimY, dimZ, name) { _surface = dimX*dimY; }
       // Destructeur
-      ~EspaceLibre(void) {}
+          ~EspaceLibre(void) {}
       
       // Accesseur
-      float getSurface(void) {return _surface;}
+          float getSurface(void) {return _surface;}
         
       // Mutateurs de sécurité :
 	  void setDimX(int dimX) { std::cout << "ERROR : Modification de la dimX d'un espace libre" << std::endl; }
