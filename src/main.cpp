@@ -4,7 +4,7 @@ int main(){
   
 
 
-	std::cout << "Ceci est un test d'affichage sous Visual Studio" << std::endl ;
+	std::cout << "Ceci est un test de master" << std::endl ;
 	system("PAUSE");
 	return 0;
 }
