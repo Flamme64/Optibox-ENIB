@@ -11,9 +11,9 @@ class Carton : public Pave{
     // Attributs :
       float _poidRang;  // Poid du carton pour le classer dans le tableau de rangement
       const bool _fragile;    // Pour savoir si le carton doit être placé au dessus
-      int _maxDim;      // La dimension maximale parmis dimX, dimY et dimZ
+      int _maxDim;      // La dimension maximale parmi dimX, dimY et dimZ
       const float _masse;     // Le poids réel du carton, sa masse quoi 
-      Contenant * _cont;
+      Contenant * _cont; // Contenant auquel appartient le carton
       
   public :
     // Méthodes génériques :
@@ -34,7 +34,7 @@ class Carton : public Pave{
     
     //Méthodes spéciales :
 	
-	//Gère le rangement par ordre décroissant des dimensions
+	//Range les dimension d'une instance de manière décroissante
 	void arrangeDim(void); 
     
 };
