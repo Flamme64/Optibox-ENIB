@@ -21,19 +21,39 @@ class Rangement{
 	Rangement(void) : _qContenant(0) {}
     // Destructeur
 	~Rangement(void) {}
-    // Accesseur et mutateurs
-	int getContActuel(void){return _qContenant;}
-	Carton* getCarton(int i){return _cartRang[i];}
-	Contenant* getContenant(int i){return _contRang[i];}
-	EspaceLibre* getEL(int i) { return _espLib[i]; }
+
+    // Accesseurs :
+		int getContActuel(void){return _qContenant;}
+
+		// Accesseur de carton
+		Carton* getCartonByRang(int i){return _cartRang[i];}	//Sélectionner un carton par son rang
+		int getCartonByName(std::string name);					//Sélectionner un carton par son nom
+		int getCartonByDim(int dim);							// Sélectionner un carton par une de ses dimensions
 	
-	void setContActuel(int i){_qContenant=i;}
-	void addCarton(Carton* carton);
-	void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de créer le carton dans la fonction
-	void addContenant(Contenant* contenant);
-	void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de créer le contenant dans la fonction
-	void addEL(EspaceLibre* espLibre);
-	void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de créer l'espace libre dans la fonction
+		// Accesseurs de contenant
+		Contenant* getContenantByRang(int i){return _contRang[i];}
+		int getContenantByName(std::string name);
+		int getContenantByDim(int dim);
+
+		// Accesseur d'espace libre
+		EspaceLibre* getELByRang(int i){return _espLib[i];}
+		int getELByName(std::string name);
+		int getELByDim(int dim);
+
+		// Fonction outil
+		
+
+	// Mutateurs
+		void setContActuel(int i){_qContenant=i;} // Préciser le contenant dans lequel on travaille
+
+		void addCarton(Carton* carton); // Ajout de carton par recopie
+		void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de créer le carton dans la fonction
+		
+		void addContenant(Contenant* contenant); // Ajout de contenant par recopie
+		void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de créer le contenant dans la fonction
+		
+		void addEL(EspaceLibre* espLibre); // Ajout d'espace libre par recopie
+		void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de créer l'espace libre dans la fonction
 	
   // Méthodes spécialisées :
     // Récupération des cartons à ranger
