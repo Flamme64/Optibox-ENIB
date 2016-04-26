@@ -25,7 +25,7 @@ class Rangement{
 	int getContActuel(void){return _qContenant;}
 	Carton* getCarton(int i){return _cartRang[i];}
 	Contenant* getContenant(int i){return _contRang[i];}
-	EspaceLibre* getEL(int i){return _espLib[i];}
+	EspaceLibre* getEL(int i) { return _espLib[i]; }
 	
 	void setContActuel(int i){_qContenant=i;}
 	void addCarton(Carton* carton);
