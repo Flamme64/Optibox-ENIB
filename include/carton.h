@@ -36,7 +36,6 @@ class Carton : public Pave{
 	
 	  //Affichage :
 	  void printCarton(void);
-	  void printContenant(void);
 
 	//Fonctions outil :
 	void arrangeDim(void); //Range les dimension d'une instance de manière décroissante -- FAIT
