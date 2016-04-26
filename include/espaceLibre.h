@@ -9,7 +9,7 @@ class Contenant;
 class EspaceLibre : public Pave{
   private :
     // Attributs :
-      float _surface; // Je ne sais pas si ça sera utile mais dans le doute ...
+      int _surface; // Je ne sais pas si ça sera utile mais dans le doute ...
       Contenant * _contenant; // Contenant dans lequel se situe l'espace libre
   
   public :
@@ -20,7 +20,7 @@ class EspaceLibre : public Pave{
           ~EspaceLibre(void) {}
       
       // Accesseur
-          float getSurface(void) {return _surface;}
+          int getSurface(void) {return _surface;}
         
       // Mutateurs de sécurité :
 	  void setDimX(int dimX) { std::cout << "ERROR : Modification de la dimX d'un espace libre" << std::endl; }
