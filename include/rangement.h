@@ -32,7 +32,7 @@ class Rangement{
 	
 		// Accesseurs de contenant
 		Contenant* getContenantByRang(int i){return _contRang[i];}
-		int getContenantByName(std::name name);
+		int getContenantByName(std::string name);
 		int getContenantByDim(int dim);
 
 		// Accesseur d'espace libre

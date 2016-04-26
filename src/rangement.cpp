@@ -1,6 +1,1 @@
 #include "rangement.h"
-
-
-
-
-Rangeme
