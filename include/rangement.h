@@ -26,25 +26,26 @@ class Rangement{
 		int getContActuel(void){return _qContenant;}
 
 		// Accesseur de carton
-		Carton* getCartonByRang(int i){return _cartRang[i];}	//Sélectionner un carton par son rang
-		int getCartonByName(std::string name);					//Sélectionner un carton par son nom
-		int getCartonByDim(int dim);							// Sélectionner un carton par une de ses dimensions
-	
+		Carton* getCartonByRang(int i){return _cartRang[i];}			// FAIT
+		std::vector<unsigned int> getCartonByName(std::string name);	// FAIT		
+		std::vector<unsigned int> getCartonByDim(int dim);				// FAIT
+
 		// Accesseurs de contenant
-		Contenant* getContenantByRang(int i){return _contRang[i];}
-		int getContenantByName(std::string name);
-		int getContenantByDim(int dim);
+		Contenant* getContenantByRang(int i){return _contRang[i];}		// FAIT
+		std::vector <unsigned int> getContenantByName(std::string name);// FAIT
+		std::vector <unsigned int> getContenantByDim(int dim);			// FAIT
 
 		// Accesseur d'espace libre
-		EspaceLibre* getELByRang(int i){return _espLib[i];}
-		int getELByName(std::string name);
-		int getELByDim(int dim);
+		EspaceLibre* getELByRang(int i){return _espLib[i];}				// FAIT
+		std::vector <unsigned int> getELByName(std::string name);		// FAIT
+		std::vector <unsigned int> getELByDim(int dim);					// FAIT
 
-		// Fonction outil
-		
+
 
 	// Mutateurs
-		void setContActuel(int i){_qContenant=i;} // Préciser le contenant dans lequel on travaille
+
+		// Précise le contenant dans lequel on travaille -- FAIT
+		void setContActuel(int i){_qContenant=i;}
 
 		void addCarton(Carton* carton); // Ajout de carton par recopie
 		void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de créer le carton dans la fonction
