@@ -1,0 +1,12 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/Optibox.vcxproj.user
+/Optibox.vcxproj.filters
+/Optibox.vcxproj
+/Optibox.VC.VC.opendb
+/Optibox.VC.db
+/Optibox.sln
+/Debug
+/.vs/Optibox/v14
