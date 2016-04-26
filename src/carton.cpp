@@ -13,7 +13,7 @@ Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::str
   
 }
 
-// Fonction qui range les dimensions par ordre croissant
+// Fonction outil qui range les dimensions par ordre croissant
 void Carton::arrangeDim(void){
   // 1- On copie les dimensions dans des variables temporaires
   int dimX, dimY, dimZ;
@@ -43,6 +43,13 @@ void Carton::arrangeDim(void){
   
 }
 
+// Fonction d'affichage
+void Carton::printCarton(void) {
+	printPave();
+	std::cout << "Masse :" << getMasse();
+	if (getFragile()) std::cout << "Fragile";
+	// On ne peut afficher le contenant que dans la classe rangement
+}
 
 
 /* IDEES/REMARQUES :

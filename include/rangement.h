@@ -1,9 +1,6 @@
 #ifndef RANGEMENT_H
 #define RANGEMENT_H
 
-#include <vector>
-#include <string>
-
 #include "contenant.h"
 #include "carton.h"
 #include "espaceLibre.h"

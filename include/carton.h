@@ -2,8 +2,8 @@
 #define CARTON_H
 
 #include "pave.h"
+
 class Contenant;
-class Pave;
 
 class Carton : public Pave{
   
@@ -13,7 +13,7 @@ class Carton : public Pave{
       const bool _fragile;    // Pour savoir si le carton doit être placé au dessus
       int _maxDim;      // La dimension maximale parmi dimX, dimY et dimZ
       const float _masse;     // Le poids réel du carton, sa masse quoi 
-      Contenant * _cont; // Contenant auquel appartient le carton
+      Contenant* _cont; // Contenant auquel appartient le carton
       
   public :
     // Méthodes génériques :
@@ -34,8 +34,12 @@ class Carton : public Pave{
     
     //Méthodes spéciales :
 	
-	//Range les dimension d'une instance de manière décroissante
-	void arrangeDim(void); 
+	  //Affichage :
+	  void printCarton(void);
+	  void printContenant(void);
+
+	//Fonctions outil :
+	void arrangeDim(void); //Range les dimension d'une instance de manière décroissante -- FAIT
     
 };
 

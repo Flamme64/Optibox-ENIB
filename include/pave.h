@@ -1,8 +1,10 @@
 #ifndef PAVEDROIT_H
 #define PAVEDROIT_H
 
-#include <string>
 #include "point.h"
+
+#include <string>
+#include <iostream>
 
 class Pave{
   private :
@@ -14,7 +16,7 @@ class Pave{
     //Attributs importés :
       Point _point;
     
-    //Méthodes génériques :
+    // Méthodes génériques :
       //Constructeur :
 	Pave(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name) : _dimX(dimX), _dimY(dimY), _dimZ(dimZ), _name(name), _point(x,y,z) {}
       // Destructeur
@@ -31,6 +33,8 @@ class Pave{
 	virtual void setDimY(int dimY) {_dimY=dimY;}
 	virtual void setDimZ(int dimZ) {_dimZ=dimZ;}
       
+	// Affichage
+	void printPave(void);
     
   
 };
