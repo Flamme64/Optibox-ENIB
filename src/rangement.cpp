@@ -103,7 +103,7 @@ bool Rangement::printContenant(unsigned int i) {
 		for (unsigned int u = 0; u < _contRang[i]->_cartons.size(); u++) {
 			_contRang[i]->_cartons[u]->printCarton();
 			std::cout << std::endl;
-			return 1;
 		}
+		return 1;
 	}
 }
