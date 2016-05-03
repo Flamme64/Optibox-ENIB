@@ -5,7 +5,7 @@ int main(){
   
 
 
-	std::cout << "Ceci est un test d'affichage de la branche de Jacques" << std::endl ;
+	std::cout << "Ceci est un test d'affichage de la branche master" << std::endl ;
 
  	system("PAUSE");
 	return 0;
