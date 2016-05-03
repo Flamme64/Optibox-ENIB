@@ -4,16 +4,16 @@
 Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse)
 :   Pave(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
 {
-  //  Attributs qui seront instanciés ultérieurement
-  _poidRang=NULL; //Le poid de l'objet dans le tableau sera calculé quand on aura trouvé la méthode pour le faire
-  _cont=NULL; //Le contenant sera attribué pendant la phase de rangement
+  //  Attributs qui seront instancies ulterieurement
+  _poidRang=0; //Le poid de l'objet dans le tableau sera calcule quand on aura trouve la methode pour le faire
+  _cont=NULL;  //Le contenant sera attribue pendant la phase de rangement
   
-  // Rangement des dimensions par ordre décroissant
+  // Rangement des dimensions par ordre decroissant
   arrangeDim();
   
 }
 
-// Fonction outil qui range les dimensions par ordre croissant
+// Fonction qui range les dimensions par ordre croissant
 void Carton::arrangeDim(void){
   // 1- On copie les dimensions dans des variables temporaires
   int dimX, dimY, dimZ;
@@ -43,13 +43,6 @@ void Carton::arrangeDim(void){
   
 }
 
-// Fonction d'affichage
-void Carton::printCarton(void) {
-	printPave();
-	std::cout << "Masse :" << getMasse();
-	if (getFragile()) std::cout << "Fragile";
-	// On ne peut afficher le contenant que dans la classe rangement
-}
 
 
 /* IDEES/REMARQUES :
