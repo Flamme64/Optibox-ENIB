@@ -1,99 +1,76 @@
 #ifndef RANGEMENT_H
 #define RANGEMENT_H
 
+#include <vector>
+#include <string>
+#include <iterator>
+
 #include "contenant.h"
 #include "carton.h"
 #include "espaceLibre.h"
 
+/*
+	void recupererCartons(std::string fichier);
+	void triDesCartons(void);
+	bool validationAttributionCoordonnees(void); // Fonction de test globale
+	bool verifMasseLegale(Carton * carton);
+	bool verifContactContainer(Carton * carton);
+	bool verifContactCarton(Carton * carton, int x, int y, int z);
+	int trouverCarton(EspaceLibre* espaceLibre);
+	bool attributionPossible(Carton * carton, EspaceLibre *);
+	void attributionCoordonnees(void);
+	void rangerLesCartons(void);
+*/
+
 class Rangement{
-private :
+  public :
   // Attributs :
     int _qContenant;
     std::vector<Carton*> _cartRang;
     std::vector<Contenant*> _contRang;
     std::vector<EspaceLibre*> _espLib;
   
-public :
-  // Méthodes génériques :
+  // Methodes generiques :
     // Constructeur
 	Rangement(void) : _qContenant(0) {}
     // Destructeur
 	~Rangement(void) {}
-
-    // Accesseurs :
-		int getContActuel(void){return _qContenant;}
-
-		// Accesseur de carton
-		Carton* getCartonByRang(int i){return _cartRang[i];}			// FAIT
-		std::vector<unsigned int> getCartonByName(std::string name);	// FAIT		
-		std::vector<unsigned int> getCartonByDim(int dim);				// FAIT
-
-		// Accesseurs de contenant
-		Contenant* getContenantByRang(int i){return _contRang[i];}		// FAIT
-		std::vector <unsigned int> getContenantByName(std::string name);// FAIT
-		std::vector <unsigned int> getContenantByDim(int dim);			// FAIT
-
-		// Accesseur d'espace libre
-		EspaceLibre* getELByRang(int i){return _espLib[i];}				// FAIT
-		std::vector <unsigned int> getELByName(std::string name);		// FAIT
-		std::vector <unsigned int> getELByDim(int dim);					// FAIT
-
-
-
-	// Mutateurs
-
-		// Précise le contenant dans lequel on travaille -- FAIT
-		void setContActuel(int i){_qContenant=i;}
-
-		void addCarton(Carton* carton); // Ajout de carton par recopie
-		void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de créer le carton dans la fonction
-		
-		void addContenant(Contenant* contenant); // Ajout de contenant par recopie
-		void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de créer le contenant dans la fonction
-		
-		void addEL(EspaceLibre* espLibre); // Ajout d'espace libre par recopie
-		void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de créer l'espace libre dans la fonction
+    // Accesseur et mutateurs
+	int getContActuel(void){return _qContenant;}
+	Carton* getCarton(int i){return _cartRang[i];}
+	Contenant* getContenant(int i){return _contRang[i];}
+	EspaceLibre* getEL(int i){return _espLib[i];}
 	
-	// Méthodes spécialisées :
-
-		// Récupération des cartons à ranger
-		void recupererCartons(std::string fichier); // A adapter car dépend de l'interface
+	void setContActuel(int i){_qContenant=i;}
+	void addCarton(Carton* carton);
+	void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de creer le carton dans la fonction
+	void addContenant(Contenant* contenant);
+	void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de creer le contenant dans la fonction
+	void addEL(EspaceLibre* espLibre);
+	void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de creer l'espace libre dans la fonction
 	
-		// Tri des cartons fonction de leurs dimensions
-		void triDesCartons(void);
+  // Methodes specialisees :
+    // Recuperation des cartons a ranger
+	void recupererCartons(std::string fichier); // A adapter car depend de l'interface
+	
+    // Tri des cartons fonction de leurs dimensions
+	void triDesCartons(void);
   
-		// Vérification de la possibilité de placement des cartons
-		bool validationAttributionCoordonnees(void); // Fonction de test globale
-		bool verifMasseLegale(Carton * carton);
-		bool verifContactContainer(Carton * carton);
-		bool verifContactCarton(Carton * carton, int x, int y, int z);
+    // Verification de la possibilite de placement des cartons
+	// Fonction utilisées avec un carton tampon
+	bool verifMasseLegale(Carton * carttmp);
+	bool verifContactContainer(Carton * carttmp, int x, int y, int z);
+	bool verifContactCarton(Carton * carttmp, int x, int y, int z);
 		
-		// Trouver le carton le plus adapté
-		int trouverCarton(EspaceLibre* espaceLibre); //Renverra l'indice du carton le plus adapté
-		bool attributionPossible(Carton * carton, EspaceLibre *);
+    // Trouver le carton le plus adapte
+	int trouverCarton(EspaceLibre* espaceLibre); //Renveira l'indice du carton le plus adapte
+	bool attributionPossible(Carton * carton, EspaceLibre * espLib);
 	
-		// Attribution des coordonnées de la position du carton
-		void attributionCoordonnees(void);
+    // Attribution des coordonnees de la position du carton
+	void attributionCoordonnees(int x,int y,int z);
 	
-		// Ranger les cartons
-		void rangerLesCartons(void);
-
-	// Affichage :
-
-		// Affichage d'un carton et de son contenant respectif -- FAIT
-		bool printCarton(unsigned int i);
-
-		// Affichage de tous les cartons et de leur contenant respectif -- FAIT
-		void printCartons(void);
-		
-		// Affichage d'un contenant et des cartons qui le composent -- FAIT
-		bool printContenant(unsigned int i);
-
-		// Affichage d'un espace libre
-		void printEL(unsigned int i);
-
-		//Affichage de tous les espaces libres
-		void printELS(void);
+    // Ranger les cartons
+	void rangerLesCartons(void);
 };
 
 #endif
@@ -101,7 +78,7 @@ public :
 /* Remarques
 
 1  Nono 
-	Réaliser un pattern de classement des cartons dans le vecteur une fois rangés pour faciliter 
-	la modélisation graphique (Nono)
+	Realiser un pattern de classement des cartons dans le vecteur une fois ranges pour faciliter 
+	la modelisation graphique (Nono)
    
 */
