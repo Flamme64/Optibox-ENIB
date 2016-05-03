@@ -69,7 +69,7 @@ public :
 		bool verifContactCarton(Carton * carton, int x, int y, int z);
 		
 		// Trouver le carton le plus adapté
-		int trouverCarton(EspaceLibre* espaceLibre); //Renveira l'indice du carton le plus adapté
+		int trouverCarton(EspaceLibre* espaceLibre); //Renverra l'indice du carton le plus adapté
 		bool attributionPossible(Carton * carton, EspaceLibre *);
 	
 		// Attribution des coordonnées de la position du carton
