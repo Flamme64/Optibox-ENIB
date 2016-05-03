@@ -7,7 +7,7 @@ class Point{
       int _x,_y,_z;
       
   public :
-    //Méthodes génériques :
+    //Methodes generiques :
       //Constructeur
       Point(int x, int y, int z) : _x(x), _y(y), _z(z) {}
       //Destructeur
@@ -23,8 +23,8 @@ class Point{
       void setY(int y) {_y=y;}
       void setZ(int z) {_z=z;}
     
-    //Méthodes spéciales :
-      //Implémenter un move ? Est ce que ça sera utile ?
+    //Methodes speciales :
+      //Implementer un move ? Est ce que ça sera utile ?
 };
 
 

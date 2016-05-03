@@ -1,9 +1,26 @@
 #ifndef RANGEMENT_H
 #define RANGEMENT_H
 
+#include <vector>
+#include <string>
+#include <iterator>
+
 #include "contenant.h"
 #include "carton.h"
 #include "espaceLibre.h"
+
+/*
+	void recupererCartons(std::string fichier);
+	void triDesCartons(void);
+	bool validationAttributionCoordonnees(void); // Fonction de test globale
+	bool verifMasseLegale(Carton * carton);
+	bool verifContactContainer(Carton * carton);
+	bool verifContactCarton(Carton * carton, int x, int y, int z);
+	int trouverCarton(EspaceLibre* espaceLibre);
+	bool attributionPossible(Carton * carton, EspaceLibre *);
+	void attributionCoordonnees(void);
+	void rangerLesCartons(void);
+*/
 
 class Rangement{
 private :
@@ -62,18 +79,18 @@ public :
 		// Tri des cartons fonction de leurs dimensions
 		void triDesCartons(void);
   
-		// Vérification de la possibilité de placement des cartons
-		bool validationAttributionCoordonnees(void); // Fonction de test globale
-		bool verifMasseLegale(Carton * carton);
-		bool verifContactContainer(Carton * carton);
-		bool verifContactCarton(Carton * carton, int x, int y, int z);
+    // Verification de la possibilite de placement des cartons
+	// Fonction utilisées avec un carton tampon
+	bool verifMasseLegale(Carton * carttmp);
+	bool verifContactContainer(Carton * carttmp, int x, int y, int z);
+	bool verifContactCarton(Carton * carttmp, int x, int y, int z);
 		
-		// Trouver le carton le plus adapté
-		int trouverCarton(EspaceLibre* espaceLibre); //Renveira l'indice du carton le plus adapté
-		bool attributionPossible(Carton * carton, EspaceLibre *);
+    // Trouver le carton le plus adapte
+	int trouverCarton(EspaceLibre* espaceLibre); //Renveira l'indice du carton le plus adapte
+	bool attributionPossible(Carton * carton, EspaceLibre * espLib);
 	
-		// Attribution des coordonnées de la position du carton
-		void attributionCoordonnees(void);
+    // Attribution des coordonnees de la position du carton
+	void attributionCoordonnees(int x,int y,int z);
 	
 		// Ranger les cartons
 		void rangerLesCartons(void);
