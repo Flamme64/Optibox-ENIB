@@ -24,25 +24,25 @@ public :
 		int getContActuel(void){return _qContenant;}
 
 		// Accesseur de carton
-		Carton* getCartonByRang(int i){return _cartRang[i];}			// FAIT
-		std::vector<unsigned int> getCartonByName(std::string name);	// FAIT		
-		std::vector<unsigned int> getCartonByDim(int dim);				// FAIT
+		Carton* getCartonByRang(int i){return _cartRang[i];}		
+		std::vector<unsigned int> getCartonByName(std::string name);		
+		std::vector<unsigned int> getCartonByDim(int dim);			
 
 		// Accesseurs de contenant
-		Contenant* getContenantByRang(int i){return _contRang[i];}		// FAIT
-		std::vector <unsigned int> getContenantByName(std::string name);// FAIT
-		std::vector <unsigned int> getContenantByDim(int dim);			// FAIT
+		Contenant* getContenantByRang(int i){return _contRang[i];}		
+		std::vector <unsigned int> getContenantByName(std::string name);
+		std::vector <unsigned int> getContenantByDim(int dim);			
 
 		// Accesseur d'espace libre
-		EspaceLibre* getELByRang(int i){return _espLib[i];}				// FAIT
-		std::vector <unsigned int> getELByName(std::string name);		// FAIT
-		std::vector <unsigned int> getELByDim(int dim);					// FAIT
+		EspaceLibre* getELByRang(int i){return _espLib[i];}				
+		std::vector <unsigned int> getELByName(std::string name);		
+		std::vector <unsigned int> getELByDim(int dim);					
 
 
 
 	// Mutateurs
 
-		// Précise le contenant dans lequel on travaille -- FAIT
+		// Précise le contenant dans lequel on travaille
 		void setContActuel(int i){_qContenant=i;}
 
 		void addCarton(Carton* carton); // Ajout de carton par recopie
@@ -80,13 +80,13 @@ public :
 
 	// Affichage :
 
-		// Affichage d'un carton et de son contenant respectif -- FAIT
+		// Affichage d'un carton et de son contenant respectif
 		bool printCarton(unsigned int i);
 
-		// Affichage de tous les cartons et de leur contenant respectif -- FAIT
+		// Affichage de tous les cartons et de leur contenant respectif
 		void printCartons(void);
 		
-		// Affichage d'un contenant et des cartons qui le composent -- FAIT
+		// Affichage d'un contenant et des cartons qui le composent
 		bool printContenant(unsigned int i);
 
 		// Affichage d'un espace libre
