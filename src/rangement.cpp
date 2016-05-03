@@ -108,6 +108,3 @@ bool Rangement::printContenant(unsigned int i) {
 	}
 }
 
-void Rangement::printEL(unsigned int i)
-{
-}
