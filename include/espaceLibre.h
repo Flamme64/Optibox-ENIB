@@ -9,7 +9,7 @@ class Contenant;
 class EspaceLibre : public Pave{
   private :
     // Attributs :
-      float _surface; // Je ne sais pas si ça sera utile mais dans le doute ...
+      int _surface; // Je ne sais pas si ça sera utile mais dans le doute ...
       Contenant * _contenant; // Contenant dans lequel se situe l'espace libre
   
   public :
