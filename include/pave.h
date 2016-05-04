@@ -40,7 +40,8 @@ class Pave{
 	virtual void setDimY(int dimY) {_dimY=dimY;}
 	virtual void setDimZ(int dimZ) {_dimZ=dimZ;}
       
-    
+	// Affichage
+	void printPave(void);
   
 };
 

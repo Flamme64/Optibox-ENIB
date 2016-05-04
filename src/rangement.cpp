@@ -112,7 +112,7 @@ void Rangement::recupererCartons(std::string fichier) {} //TODO
 
 														 // Tri des cartons fonction de leurs dimensions
 void Rangement::triDesCartons(void) {
-	int modif;
+	int modif=1;
 	while (modif) {
 		modif = 0;
 		for (unsigned int i = 0; i<_cartRang.size() - 1; i++) {
