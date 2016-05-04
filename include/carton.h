@@ -34,6 +34,9 @@ class Carton : public Pave{
     
     //Methodes speciales :
 	
+	//Affichage :
+	void printCarton(void);
+
 	//Range les dimension d'une instance de manière decroissante
 	void arrangeDim(void); 
     
