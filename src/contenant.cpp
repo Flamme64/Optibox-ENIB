@@ -1,6 +1,12 @@
 #include "contenant.h"
 
 
+// Affichage :
+void Contenant::printContenant(void) {
+	printPave();
+	std::cout << "Massemax :" << getMasseMax();
+	// On ne peut afficher les cartons que dans la classe rangement
+}
 
 /*
 1 - Jacques (RESOLU)
