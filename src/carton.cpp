@@ -1,5 +1,5 @@
 #include "carton.h"
-
+#
 // Constructeur
 Carton::Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse)
 :   Pave(x,y,z,dimX,dimY,dimZ,name), _fragile(fragile), _masse(masse)
@@ -43,7 +43,13 @@ void Carton::arrangeDim(void){
   
 }
 
-
+// Fonction d'affichage
+void Carton::printCarton(void) {
+	printPave();
+	std::cout << "Masse :" << getMasse();
+	if (getFragile()) std::cout << "Fragile";
+	// On ne peut afficher le contenant que dans la classe rangement
+}
 
 /* IDEES/REMARQUES :
 
