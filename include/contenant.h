@@ -34,7 +34,9 @@ class Contenant : public Pave{
     
     // Gestion des cartons :
     
-  
+	// Methodes speciales :
+	// Affichage :
+	  void printContenant(void);
 
 };
 

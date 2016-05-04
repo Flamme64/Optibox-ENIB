@@ -23,38 +23,61 @@
 */
 
 class Rangement{
-  public :
+private :
   // Attributs :
     int _qContenant;
     std::vector<Carton*> _cartRang;
     std::vector<Contenant*> _contRang;
     std::vector<EspaceLibre*> _espLib;
   
-  // Methodes generiques :
+public :
+  // Méthodes génériques :
     // Constructeur
 	Rangement(void) : _qContenant(0) {}
     // Destructeur
 	~Rangement(void) {}
-    // Accesseur et mutateurs
-	int getContActuel(void){return _qContenant;}
-	Carton* getCarton(int i){return _cartRang[i];}
-	Contenant* getContenant(int i){return _contRang[i];}
-	EspaceLibre* getEL(int i){return _espLib[i];}
+
+    // Accesseurs :
+		int getContActuel(void){return _qContenant;}
+
+		// Accesseur de carton
+		Carton* getCartonByRang(int i){return _cartRang[i];}		
+		std::vector<unsigned int> getCartonByName(std::string name);		
+		std::vector<unsigned int> getCartonByDim(int dim);			
+
+		// Accesseurs de contenant
+		Contenant* getContenantByRang(int i){return _contRang[i];}		
+		std::vector <unsigned int> getContenantByName(std::string name);
+		std::vector <unsigned int> getContenantByDim(int dim);			
+
+		// Accesseur d'espace libre
+		EspaceLibre* getELByRang(int i){return _espLib[i];}				
+		std::vector <unsigned int> getELByName(std::string name);		
+		std::vector <unsigned int> getELByDim(int dim);					
+
+
+
+	// Mutateurs
+
+		// Précise le contenant dans lequel on travaille
+		void setContActuel(int i){_qContenant=i;}
+
+		void addCarton(Carton* carton); // Ajout de carton par recopie
+		void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de créer le carton dans la fonction
+		
+		void addContenant(Contenant* contenant); // Ajout de contenant par recopie
+		void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de créer le contenant dans la fonction
+		
+		void addEL(EspaceLibre* espLibre); // Ajout d'espace libre par recopie
+		void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de créer l'espace libre dans la fonction
 	
-	void setContActuel(int i){_qContenant=i;}
-	void addCarton(Carton* carton);
-	void addCarton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse); // Permet de creer le carton dans la fonction
-	void addContenant(Contenant* contenant);
-	void addContenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax); // Permet de creer le contenant dans la fonction
-	void addEL(EspaceLibre* espLibre);
-	void addEL(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name); // Permet de creer l'espace libre dans la fonction
+	// Méthodes spécialisées :
+
+		// Récupération des cartons à ranger
+		void recupererCartons(std::string fichier); // A adapter car dépend de l'interface
 	
-  // Methodes specialisees :
-    // Recuperation des cartons a ranger
-	void recupererCartons(std::string fichier); // A adapter car depend de l'interface
-	
-    // Tri des cartons fonction de leurs dimensions
-	void triDesCartons(void);
+		// Tri des cartons fonction de leurs dimensions
+		void triDesCartons(void);
   
     // Verification de la possibilite de placement des cartons
 	// Fonction utilisées avec un carton tampon
@@ -69,8 +92,25 @@ class Rangement{
     // Attribution des coordonnees de la position du carton
 	void attributionCoordonnees(int x,int y,int z);
 	
-    // Ranger les cartons
-	void rangerLesCartons(void);
+		// Ranger les cartons
+		void rangerLesCartons(void);
+
+	// Affichage :
+
+		// Affichage d'un carton et de son contenant respectif
+		bool printCarton(unsigned int i);
+
+		// Affichage de tous les cartons et de leur contenant respectif
+		void printCartons(void);
+		
+		// Affichage d'un contenant et des cartons qui le composent
+		bool printContenant(unsigned int i);
+
+		// Affichage d'un espace libre
+		void printEL(unsigned int i);
+
+		//Affichage de tous les espaces libres
+		void printELS(void);
 };
 
 #endif
@@ -78,7 +118,7 @@ class Rangement{
 /* Remarques
 
 1  Nono 
-	Realiser un pattern de classement des cartons dans le vecteur une fois ranges pour faciliter 
-	la modelisation graphique (Nono)
+	Réaliser un pattern de classement des cartons dans le vecteur une fois rangés pour faciliter 
+	la modélisation graphique (Nono)
    
 */
