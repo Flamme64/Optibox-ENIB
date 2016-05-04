@@ -3,6 +3,7 @@
 
 #include <string>
 #include "point.h"
+#include <iostream>
 
 class Pave{
   private :
