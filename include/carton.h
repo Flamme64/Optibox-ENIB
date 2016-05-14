@@ -19,6 +19,13 @@ class Carton : public Pave{
     // Methodes generiques :
       // Constructeur
       Carton(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, const bool fragile, const float masse);
+
+    Carton(double poid, bool fra, int dimMax,double mass, int dimx,int dimy,int dimz,Point p) :
+        Pave(dimx,dimy,dimz,p), poids(poid),fragile(fra),maxDim(dimMax),masse(mass){}
+
+    Carton(int dimx,int dimy,int dimz) :
+        Pave(dimx,dimy,dimz){}
+
       //Destructeur
       ~Carton(void) {}
       
@@ -49,5 +56,6 @@ class Carton : public Pave{
 
 */
 #endif
+                            //mon code //
 
 
