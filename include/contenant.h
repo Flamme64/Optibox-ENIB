@@ -18,6 +18,14 @@ class Contenant : public Pave{
     // Methodes generiques
     // Contructeur
       Contenant(int x, int y, int z, int dimX, int dimY, int dimZ, const std::string name, float masseMax) : Pave(x,y,z,dimX,dimY,dimZ, name), _masseMax(masseMax), _masseActuelle(0) {}
+      
+      Contenant(double charge, int dimx,int dimy,int dimz,Point p) :
+           Pave(dimx,dimy,dimz,p), chargeMax(charge){}
+      		
+
+      Contenant(double charge, int dimx,int dimy,int dimz) :
+            Pave(dimx,dimy,dimz), chargeMax(charge){}
+   
     // Destructeur
       ~Contenant(void) {}
     
